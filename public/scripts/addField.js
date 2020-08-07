@@ -1,5 +1,5 @@
 // Procurar o botão
-document.querySelector("#add-time")
+document.querySelector("#add_time")
 // Quando clicar no botão
 .addEventListener('click', cloneField)
 
@@ -11,8 +11,8 @@ function cloneField () {
     // Limpar os campos
     const fields = newFieldContainer.querySelectorAll('input')
 
-    fields.forEach(function () {
-        fields.value = ""
+    fields.forEach(function (field) {
+        field.value = ""
     })
 
     // Colocar na página
