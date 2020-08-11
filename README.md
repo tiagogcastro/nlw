@@ -15,10 +15,10 @@ ___
 
 ___
 
-<img src="https://readme-maker.herokuapp.com/uploads/c0c9b10fb9a45a0d-nlwCadastro.png" width="1200">
-<img src="https://readme-maker.herokuapp.com/uploads/4e8485f7851ae99f-nlwHome.png" width="1200">
-<img src="https://readme-maker.herokuapp.com/uploads/02df6ba979c81f3d-nlwSave.png" width="1200">
-<img src="https://readme-maker.herokuapp.com/uploads/2a5f674dfba992d9-nlwStudy.png" width="1200">
+<img src="/prints/nlwHome.png" width="1200">
+<img src="/prints/nlwCadastro.png" width="1200">
+<img src="/prints/nlwSave.png" width="1200">
+<img src="/nlwStudy.png" width="1200">
 
 ## :information_source: Sobre
 
