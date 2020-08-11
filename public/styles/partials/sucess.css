@@ -1,0 +1,118 @@
+body, html {
+    height: 100vh;
+}
+
+#page-landing {
+    background: var(--color-primary);
+}
+
+#container img {
+    width: 100%;
+}
+
+#container {
+    width: 90vw;
+    max-width: 700px;
+    position: relative;
+}
+
+.sucess-cadastro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0 0 0;
+    padding: 0 2.8rem;
+}
+
+.sucess-cadastro h1{
+    color: var(--color-title-in-primary);
+    font-size: 5.4rem;
+    font-weight: 700;
+    font-family: Archivo, sans-serif;
+    margin-bottom: 1.6rem;
+    text-align: center;
+}
+
+.sucess-cadastro p {
+    color: var(--color-text-in-primary);
+    font-family: Poppins, sans-serif;
+    line-height: 2.7rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.linha {
+    border-bottom: 1px solid var(--color-secondary);
+    margin: 6rem 0 2rem;
+}
+
+.end {
+    margin: 0 0 6rem  ;
+}
+
+.buttons-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.buttons-page a {
+    padding: 3rem 2.6rem;
+    margin: 1rem;
+    color: var(--color-button-text);
+    text-decoration: none;
+    background-color: var(--color-secondary);
+    font: 700 1.8rem Archivo, sans-serif;
+    border-radius: 8px;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.buttons-page a:hover {
+    cursor: pointer;
+    background: var(--color-secondary-dark);
+}
+
+@media (min-width: 730px) {
+    :root {
+        font-size: 62.5%; /* Todo 1rem vai ser relativo a 10px */
+    }
+
+    .sucess-cadastro {
+        margin: 0;
+    }
+
+    .buttons-page {
+        display: grid;
+        grid-template-columns: repeat(3, 1.5fr);
+    }
+
+    .end {
+        margin: 0;
+    }
+
+}
+
+@media(min-height: 300px) {
+    .sucess-cadastro img{
+        margin-top: 250px;
+    }
+}
+
+@media(min-height: 500px) {
+    .sucess-cadastro img {
+        margin-top: 100px;
+    }
+}
+
+@media(min-height: 700px) {
+    .sucess-cadastro img {
+        margin-top: -100px;
+    }
+}
