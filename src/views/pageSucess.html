@@ -18,20 +18,13 @@
         <h1>Cadastro salvo!</h1>
         <p>Tudo certo, seu cadastro está na nossa lista de professores.</p>
         <p>Agora é so ficar de olho no seu WhatsApp.</p>
-        <div class="buttons-page">
-            <a href="/">Inicio</a>
-            <a href="/study">Ver proffys</a>
-            <a href="/give-classes">Cadastrar Proffys</a>
-        </div>
         <p class="linha">Obrigado por se cadastrar!</p>
-        <p class="end">Você será redirecionado em alguns segundos para o inicio !</p>
     </div>
 </body>
 
 <script>
-// setTimeout( () => {
-//     window.location = '/study' 
-// }, 2000) 
-
+    setTimeout(() => {
+      window.location = "/study" + window.location.search;
+    }, 4000);
 </script>
 </html>

@@ -12,12 +12,10 @@ ___
 </h3>
 
 ___
-
 <img src="prints/nlwHome.png" width="1200">
 <img src="prints/nlwCadastro.png" width="1200">
 <img src="prints/nlwSave.png" width="1200">
 <img src="prints/nlwStudy.png" width="1200">
-
 ## :information_source: Sobre
 
 O projeto foi feito com o intuito de ser uma plataforma onde professores podem postar a máteria com o dia e hora que dão aulas para alunos pesquisarem e entrarem em contato com o professor.
