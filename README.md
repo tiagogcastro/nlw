@@ -8,17 +8,16 @@ ___
 <h3 align="center">
   <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
   <a href="#interrobang-motivo">Motivo</a>&nbsp;|&nbsp;
-  <a href="#seedling-requisitos-mínimos">Requisitos</a>&nbsp;|&nbsp;
   <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;|&nbsp;
   <a href="#link-como-contribuir">Como Contribuir</a>&nbsp;|&nbsp;
 </h3>
 
 ___
 
-<img src="/prints/nlwHome.png" width="1200">
-<img src="/prints/nlwCadastro.png" width="1200">
-<img src="/prints/nlwSave.png" width="1200">
-<img src="/nlwStudy.png" width="1200">
+<img src="prints/nlwHome.png" width="1200">
+<img src="prints/nlwCadastro.png" width="1200">
+<img src="prints/nlwSave.png" width="1200">
+<img src="nlwStudy.png" width="1200">
 
 ## :information_source: Sobre
 
