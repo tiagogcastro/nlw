@@ -1,44 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Nlw - Projeto de Orfanato
+___
 
-## Available Scripts
+<p align="center">
+  <a href="#information_source-sobre">:information_source:  Sobre</a>&nbsp;|&nbsp;
+  <a href="#interrobang-motivo">:interrobang: Motivo</a>&nbsp;|&nbsp;
+  <a href="#seedling-requisitos-mínimos">:seedling: Requisitos</a>&nbsp;|&nbsp; 
+  <a href="#rocket-tecnologias-utilizadas">:rocket:  Tecnologias</a>&nbsp;|&nbsp;
+  <a href="#link-como-contribuir">:link: Como Contribuir</a>&nbsp;|&nbsp;
+  <a href="#iphone-Entre-em-contato-comigo"> :iphone: Contato</a>&nbsp;|&nbsp;
+</p>
 
-In the project directory, you can run:
+___
+## :information_source: Sobre
 
-### `yarn start`
+<p>
+Este projeto é feito com a intenção de cadastrar Orfanatos com informações para usuários poderem ir visitar estes lares.
+O app é mobile e WebSite e consta com backend.
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :interrobang: Motivo
+<p>
+O motivo foi de ter o objetivo de aprender em 5 dias algumas das tecnologias mais atuais e dar inicio em uma nova jornada(react e react native) e entender outros diversos conceitos até mesmo do backend com Nodejs, então para mim foi algo perfeito.
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+___
 
-### `yarn test`
+## :seedling: Requisitos Mínimos
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ter NodeJs instalado no Computador.
+Dar npm install no projeto.
+Criar um arquivo .env e seguir o formato do .env.example para poder rodar o banco de dados que está no arquivo database.sql.
 
-### `yarn build`
+___
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :rocket: Tecnologias Utilizadas 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- <a href=""> NodeJs </a>
+- <a href=""> ReactJs </a>
+- <a href=""> React Native </a>
+- <a href=""> Expo </a>
+- <a href=""> CSS </a>
+- <a href=""> SQL </a>
+___
 
-### `yarn eject`
+## :link: Como contribuir 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Faça um Fork do repositório
+- Clone o seu repositório
+- Crie uma branch com a sua feature
+- Faça um commit com suas mudanças
+- 'Push' a sua branch
+- Ir em Pull Requests do projeto original e criar uma pull request com o seu commit
+___
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :iphone: Entre em contato comigo 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p>
+  - <a href="https://www.linkedin.com/in/tiagogoncalves200428/">Linkedin</a>&nbsp;|&nbsp;
+  <a href="https://www.instagram.com/tg001_xx/?hl=pt-br">Instagram</a>&nbsp;|&nbsp;
+  <span>Discord: Tiaguin061#2748 </span>
+</p>
