@@ -1,64 +1,147 @@
-## Nlw - Projeto de Orfanato
-___
+<h1 align="center"> Orfanatos </h1>
 
-<p align="center">
-  <a href="#information_source-sobre">:information_source:  Sobre</a>&nbsp;|&nbsp;
-  <a href="#interrobang-motivo">:interrobang: Motivo</a>&nbsp;|&nbsp;
-  <a href="#seedling-requisitos-mínimos">:seedling: Requisitos</a>&nbsp;|&nbsp; 
-  <a href="#rocket-tecnologias-utilizadas">:rocket:  Tecnologias</a>&nbsp;|&nbsp;
-  <a href="#link-como-contribuir">:link: Como Contribuir</a>&nbsp;|&nbsp;
-  <a href="#iphone-Entre-em-contato-comigo"> :iphone: Contato</a>&nbsp;|&nbsp;
-</p>
+<p align="center">🔍 Navegação dentro do Readme. </p>
 
-___
-## :information_source: Sobre
+<div align="center">
 
-<p>
-Este projeto é feito com a intenção de cadastrar Orfanatos com informações para usuários poderem ir visitar estes lares.
-O app é mobile e WebSite e consta com backend.
-</p>
+  [![](https://img.shields.io/badge/-Sobre-5276f2)](#sobre-o-projeto)
+  [![](https://img.shields.io/badge/-Tecnologias-5276f2)](#techs)
+  [![](https://img.shields.io/badge/-Começando-5276f2)](#rodar-projeto)
+  [![](https://img.shields.io/badge/-Contribuir-5276f2)](#contribuir)
+  [![](https://img.shields.io/badge/-Social-5276f2)](#rede-social)
+  [![](https://img.shields.io/badge/-Licença-5276f2)](#license)
 
-## :interrobang: Motivo
-<p>
-O motivo foi de ter o objetivo de aprender em 5 dias algumas das tecnologias mais atuais e dar inicio em uma nova jornada(react e react native) e entender outros diversos conceitos até mesmo do backend com Nodejs, então para mim foi algo perfeito.
-</p>
+</div>
 
-___
+</br></br>
 
-## :seedling: Requisitos Mínimos
+<div align="left">
+  <h1 id="sobre-o-projeto"> ✅ Sobre o projeto </h1>
+  <p>
+    Este projeto é feito com a intenção de cadastrar Orfanatos com informações para usuários poderem ir visitar estes lares. </br>
+    O app é mobile e WebSite e consta com backend.
+  </p>
+</div>
 
-Ter NodeJs instalado no Computador.
-Dar npm install no projeto.
-Criar um arquivo .env e seguir o formato do .env.example para poder rodar o banco de dados que está no arquivo database.sql.
+</br>
 
 ___
 
-## :rocket: Tecnologias Utilizadas 
+<div align="left"> 
+  <h1 id="techs">🚀 Tecnologias Utilizadas </h1> 
+  <p>
+    Utilizei o VsCode para fazer os códigos em ReactJS, Typescript, React native e nodejs. 
+  </p>
+  <p>
+    Utilizei o Css para fazer a estilização das telas.
+  </p>
+  <p>
+    Utilizei o Expo para facilitar na conexão entre o celular e o projeto em React native.
+  </p>
+  <div>
+    <p>
+      ➡
+      <a href="https://pt-br.reactjs.org"> ReactJS</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://reactnative.dev"> React Native</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://www.typescriptlang.org"> Typescript</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://expo.dev"> Expo</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://code.visualstudio.com"> VsCode</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"> Css</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://www.sqlite.org/index.html"> Sql</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://nodejs.org/en/"> Nodejs</a>
+    </p>
+  </div>
+</div> 
 
-O projeto foi desenvolvido utilizando as seguintes tecnologias
+</br>
 
-- <a href=""> NodeJs </a>
-- <a href=""> ReactJs </a>
-- <a href=""> React Native </a>
-- <a href=""> Expo </a>
-- <a href=""> CSS </a>
-- <a href=""> SQL </a>
 ___
 
-## :link: Como contribuir 
+<div align="left">
+  <h1 id="rodar-projeto">💻 Como rodar o projeto na sua máquina da forma que rodei na minha</h1>
+  <p>➡ Instalar o NodeJS na sua máquina. <p>
 
-- Faça um Fork do repositório
-- Clone o seu repositório
-- Crie uma branch com a sua feature
-- Faça um commit com suas mudanças
-- 'Push' a sua branch
-- Ir em Pull Requests do projeto original e criar uma pull request com o seu commit
+  <p>➡ Vá no cmd dele(no Vscode o nome é "terminal") ou abra o cmd da sua máquina, digite e execute: </p>
+  <p> 
+
+    git clone https://github.com/Tiaguin061/Orfanato-nlw3
+  </p>
+  <p>➡ Entre na pasta do projeto(a que acabou de clonar), digite e execute o comando: </p>
+  <p>
+
+    yarn
+  </p>
+  <p>➡ Para ver os comandos disponíveis e dependências instaladas, vá no arquivo package.json. </p>
+  
+  <p>➡ Você precisa ter o Nodejs instalado na sua máquina.</p>
+
+  <p>➡ Crie um arquivo .env e siga o formato do arquivo .env.example, colocando os seus valores corretos.</p>
+
+  <p>➡ Por fim, ao fazer tudo certinho, execute o comando:</p>
+  <p>
+
+    yarn start
+  </p>
+
+  <p>❤ Pronto, seu projeto está certinho para funcionar.</p>
+  <p> Algum erro? Contate-me. </p>
+</div>
+
+</br>
+
 ___
 
-## :iphone: Entre em contato comigo 
+<div align="left">
+  <h1 id="contribuir">🔗 Como contribuir com o projeto</h1>
+  <div>
+    <p> 1° - Faça um Fork do repositório; </p>
+    <p> 2° - Clone o repositório; </p>
+    <p> 3° - Crie uma branch com a sua feature; </p>
+    <p> 4° - Faça um commit bem descritivo com suas mudanças; </p>
+    <p> 5° - Dê 'Push' a sua branch; </p>
+    <p> 6° - Ir em Pull Requests do projeto original e criar uma pull request com o seu commit; </p>
+    <p>
+     ➡ Caso tenha dúvidas sobre como criar um pull request, 
+      <a 
+        href="https://docs.github.com/pt/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request"> clique neste link.
+      </a>  
+    </p>
+  </div>
+</div>
 
-<p>
-  - <a href="https://www.linkedin.com/in/tiagogoncalves200428/">Linkedin</a>&nbsp;|&nbsp;
-  <a href="https://www.instagram.com/tg001_xx/?hl=pt-br">Instagram</a>&nbsp;|&nbsp;
-  <span>Discord: Tiaguin061#2748 </span>
-</p>
+</br>
+
+___
+
+<div align="left">
+  <h1 id="rede-social">📱 Minhas redes sociais</h1>
+  <p> Eu me chamo Tiago Gonçalves, abaixo deixo os links das minhas principais redes na qual participo.
+  </p>
+
+  [![](https://img.shields.io/badge/-Github-434140)](https://github.com/Tiaguin061)
+  [![](https://img.shields.io/badge/-Linkedin-3DC3C9)](https://www.linkedin.com/in/tiagogoncalves200428/)
+  [![](https://img.shields.io/badge/-Instagram-EA3C7A)](https://www.instagram.com/tiaguinho_gon1/?hl=pt-br)
+  [![](https://img.shields.io/badge/-Discord-5276f2)](https://discord.com/users/586186122611130368)
+
+</div>
