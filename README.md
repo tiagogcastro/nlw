@@ -14,16 +14,18 @@
 
 </div>
 
-</br></br>
+</br>
 
 <div align="left">
   <h1 id="sobre-o-projeto"> ✅ Sobre o projeto </h1>
   <p>
-    O projeto foi feito para cadastrar pontos de coleta de materias recíclavel.
+    O primeiro projeto desenvolvido na NLW, que é um evento da Rocketseat, na qual foi importante para o meu aprendizado. <br />
+    Foi feito para cadastrar pontos de coleta de materias recíclavel. <br />
+    Crie pontos de coleta, pesquise sua cidade
   </p>
 </div>
 
-</br>
+<img src=".github/home_page.png" alt="Ecoleta home page">
 
 ___
 
