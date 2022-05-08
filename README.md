@@ -9,7 +9,6 @@
   [![](https://img.shields.io/badge/-Começando-5276f2)](#rodar-projeto)
   [![](https://img.shields.io/badge/-Contribuir-5276f2)](#contribuir)
   [![](https://img.shields.io/badge/-Social-5276f2)](#rede-social)
-  [![](https://img.shields.io/badge/-Licença-5276f2)](#license)
 
 
 </div>
