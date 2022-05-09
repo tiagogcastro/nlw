@@ -9,30 +9,27 @@
   [![](https://img.shields.io/badge/-Começando-5276f2)](#rodar-projeto)
   [![](https://img.shields.io/badge/-Contribuir-5276f2)](#contribuir)
   [![](https://img.shields.io/badge/-Social-5276f2)](#rede-social)
-  [![](https://img.shields.io/badge/-Licença-5276f2)](#license)
 
 </div>
 
-</br></br>
+</br>
 
 <div align="left">
   <h1 id="sobre-o-projeto"> ✅ Sobre o projeto </h1>
   <p>
-    O projeto foi feito com o intuito de ser uma plataforma onde professores podem postar a máteria com o dia e hora que dão aulas para alunos pesquisarem e entrarem em contato com o professor.
+    O projeto foi feito com o intuito de ser uma plataforma onde professores podem se cadastrar, colocando alguns dados como Matéria que da aula. </br>
+    Com isto, o professor coloca horários que estará disponível para dar aulas e pessoas que se interessar poderá entrar em contato atráves do WhatsApp cadastrado.
   </p>
 </div>
 
-<div>
-  <img src="prints/nlwHome.png" width="500" align="center">
-</div>
-</br>
+<img src=".github/proffy_home_page.png" alt="Ecoleta home page">
 
 ___
 
 <div align="left"> 
   <h1 id="techs">🚀 Tecnologias Utilizadas </h1> 
   <p>
-    Utilizei o VsCode para desenvolver o projet em Javascript, html e css.
+    Utilizei o VsCode para desenvolver o frontend do projeto em Javascript, html com template engine Nunjucks para exibir dados dinâmicos e css para estilização.
   </p>
   <p>
     Utilizei o Nodejs para fazer a parte backend do projeto.
@@ -45,6 +42,10 @@ ___
     <p>
       ➡
       <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"> Css</a>
+    </p>
+    <p>
+      ➡
+      <a href="https://mozilla.github.io/nunjucks/"> Nunjucks</a>
     </p>
     <p>
       ➡
@@ -71,7 +72,7 @@ ___
   <p>➡ Vá no cmd dele(no Vscode o nome é "terminal") ou abra o cmd da sua máquina, digite e execute: </p>
   <p> 
 
-    git clone https://github.com/Tiaguin061/Proffy-nlw2
+    git clone 'url do projeto'
   </p>
 
   <p>➡ Você precisa ter o Nodejs instalado na sua máquina.</p>
@@ -86,7 +87,9 @@ ___
   <p>➡ Por fim, ao fazer tudo certinho, execute o comando:</p>
   <p>
 
-    yarn dev ou npm run dev
+    yarn dev 
+    ou 
+    npm run dev
   </p>
 
   <p>❤ Pronto, seu projeto está certinho para funcionar.</p>
