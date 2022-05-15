@@ -4,7 +4,6 @@
 
 <div align="center">
 
-  [![](https://img.shields.io/badge/-Sobre-5276f2)](#sobre-o-projeto)
   [![](https://img.shields.io/badge/-Tecnologias-5276f2)](#techs)
   [![](https://img.shields.io/badge/-Começando-5276f2)](#rodar-projeto)
   [![](https://img.shields.io/badge/-Contribuir-5276f2)](#contribuir)
@@ -13,30 +12,18 @@
 
 </div>
 
-</br></br>
-
-<div align="left">
-  <h1 id="sobre-o-projeto"> ✅ Sobre o projeto </h1>
-  <p>
-    Este projeto é feito com a intenção de cadastrar Orfanatos com informações para usuários poderem ir visitar estes lares. </br>
-    O app é mobile e WebSite e consta com backend.
-  </p>
-</div>
-
-</br>
-
 ___
 
 <div align="left"> 
   <h1 id="techs">🚀 Tecnologias Utilizadas </h1> 
   <p>
-    Utilizei o VsCode para fazer os códigos em ReactJS, Typescript, React native e nodejs. 
+    Utilizei o VsCode para fazer os códigos em ReactJS, Typescript
   </p>
   <p>
     Utilizei o Css para fazer a estilização das telas.
   </p>
   <p>
-    Utilizei o Expo para facilitar na conexão entre o celular e o projeto em React native.
+    Utilizei o React Leaflet para consumir o World Map.
   </p>
   <div>
     <p>
@@ -45,15 +32,7 @@ ___
     </p>
     <p>
       ➡
-      <a href="https://reactnative.dev"> React Native</a>
-    </p>
-    <p>
-      ➡
       <a href="https://www.typescriptlang.org"> Typescript</a>
-    </p>
-    <p>
-      ➡
-      <a href="https://expo.dev"> Expo</a>
     </p>
     <p>
       ➡
@@ -65,11 +44,7 @@ ___
     </p>
     <p>
       ➡
-      <a href="https://www.sqlite.org/index.html"> Sql</a>
-    </p>
-    <p>
-      ➡
-      <a href="https://nodejs.org/en/"> Nodejs</a>
+      <a href="https://leafletjs.com"> React leaflet(para mapas)</a>
     </p>
   </div>
 </div> 
@@ -79,29 +54,26 @@ ___
 ___
 
 <div align="left">
-  <h1 id="rodar-projeto">💻 Como rodar o projeto na sua máquina da forma que rodei na minha</h1>
-  <p>➡ Instalar o NodeJS na sua máquina. <p>
+  <h1 id="rodar-projeto">💻 Seguindo etapa para rodar o projeto - Frontend</h1>
+  <p>➡ Continuação de como rodar o projeto Happy após a clonagem do repositório.<p>
 
-  <p>➡ Vá no cmd dele(no Vscode o nome é "terminal") ou abra o cmd da sua máquina, digite e execute: </p>
+  <p>➡ Vá no cmd dele(no Vscode o nome é "terminal") ou abra o cmd da sua máquina, vá no diretório do frontend, digite e execute: </p>
   <p> 
 
-    git clone https://github.com/Tiaguin061/Orfanato-nlw3
-  </p>
-  <p>➡ Entre na pasta do projeto(a que acabou de clonar), digite e execute o comando: </p>
-  <p>
-
     yarn
+    or
+    npm intall
   </p>
   <p>➡ Para ver os comandos disponíveis e dependências instaladas, vá no arquivo package.json. </p>
   
-  <p>➡ Você precisa ter o Nodejs instalado na sua máquina.</p>
-
   <p>➡ Crie um arquivo .env e siga o formato do arquivo .env.example, colocando os seus valores corretos.</p>
 
   <p>➡ Por fim, ao fazer tudo certinho, execute o comando:</p>
   <p>
 
     yarn start
+    or
+    npm run start
   </p>
 
   <p>❤ Pronto, seu projeto está certinho para funcionar.</p>
