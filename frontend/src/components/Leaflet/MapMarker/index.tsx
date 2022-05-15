@@ -8,11 +8,13 @@ import { mapIcon } from "../../../utils/mapicon";
 import { GeoLocation } from '../LeafletMap';
 
 export type MapMarkerProps = {
-  setPosition?: React.Dispatch<React.SetStateAction<GeoLocation | null>>;
+  setPosition?: (location: GeoLocation | null) => void;
   popupText?: string;
   setCurrentMarkerOnClick?: boolean;
   getCurrentLocation?: boolean;
   icon?: Icon;
+
+  setErrors?: <T>(errors: T) => void;
 }
 
 export function MapMarker({
@@ -20,30 +22,40 @@ export function MapMarker({
   popupText,
   setCurrentMarkerOnClick=true,
   getCurrentLocation=true,
-  icon
+  icon,
+  setErrors
 }: MapMarkerProps) {
   const [markerPosition, setMarkerPosition] = useState<GeoLocation | null>(null);
 
   const map = useMapEvents({
     click(event) {
       map.locate();
+      map.flyTo(event.latlng, map.getZoom())
+
+      setPosition && setPosition(event.latlng);
+
+      // using by form lib
+      setErrors && setErrors((prevState: any) => {
+        return {
+          ...prevState,
+          latitude: undefined,
+          longitude: undefined,
+        }
+      })
 
       if(setCurrentMarkerOnClick) {
         setMarkerPosition(event.latlng);
       }
-
-      map.flyTo(event.latlng, map.getZoom())
-      setPosition && setPosition(event.latlng);
     },
     locationfound: (event) => {
-      map.flyTo(event.latlng, map.getZoom());
-
       if(getCurrentLocation) {
+        map.flyTo(event.latlng, map.getZoom());
+
+        setPosition && setPosition(event.latlng);
+
         setMarkerPosition(event.latlng);
       }
-      setPosition && setPosition(event.latlng);
     },
-
   });
 
   return markerPosition && (
