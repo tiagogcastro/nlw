@@ -1,4 +1,4 @@
-<h1 align="center"> Orfanatos </h1>
+<h1 align="center"> Happy Frontend </h1>
 
 <p align="center">🔍 Navegação dentro do Readme. </p>
 
@@ -62,7 +62,7 @@ ___
 
     yarn
     or
-    npm intall
+    npm install
   </p>
   <p>➡ Para ver os comandos disponíveis e dependências instaladas, vá no arquivo package.json. </p>
   
