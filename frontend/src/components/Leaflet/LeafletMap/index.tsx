@@ -25,7 +25,7 @@ export function LeafletMap({
         location.lng
         ] 
       }
-      zoom={10}
+      zoom={12}
       style={{ width: '100%', height: '100%' }}
       {...rest}  
     >
