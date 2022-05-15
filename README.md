@@ -6,7 +6,6 @@
 
   [![](https://img.shields.io/badge/-Sobre-5276f2)](#sobre)
   [![](https://img.shields.io/badge/-Tecnologias-5276f2)](#techs)
-  [![](https://img.shields.io/badge/-Começando-5276f2)](#rodar-projeto)
   [![](https://img.shields.io/badge/-Contribuir-5276f2)](#contribuir)
   [![](https://img.shields.io/badge/-Social-5276f2)](#rede-social)
 
