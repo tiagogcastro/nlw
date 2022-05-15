@@ -1,143 +1,205 @@
 import './styles.css';
 
-import React, { useState, FormEvent, ChangeEvent } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import * as Yup from 'yup';
 
-import { LatLng } from 'leaflet';
+import { useNavigate } from "react-router-dom";
 
 import { FiPlus } from "react-icons/fi";
 
 import {Sidebar} from "../../components/Sidebar";
-
-import {api} from "../../services/api";
-import { GeoLocation, LeafletOrphanagesMap } from '../../components/Leaflet';
+import { Input } from '../../components/Input';
 import { MapMarker } from '../../components/Leaflet/MapMarker';
+
+import { GeoLocation, LeafletOrphanagesMap } from '../../components/Leaflet';
+import { Textarea } from '../../components/Textarea';
+import { getValidationErrors } from '../../utils/yupGetValidation';
+import { useForm } from '../../hooks/useForm';
+import { Form } from '../../components/Form';
+import { api } from '../../services/api';
 
 export type MapMarkerProps = {
   position: GeoLocation | null;
 }
 
+export type CreateOrphanageData = {
+  latitude?: number | null;
+  longitude?: number | null;
+  name: string;
+  about: string;
+  instructions: string;
+  opening_hours: string;
+  open_on_weekends: boolean;
+  images?: File[] | null;
+}
+
+const validationYupSchema = Yup.object({
+  name: Yup.string()
+    .max(24, "Máximo de 24 caracteres")
+    .required("Este campo é obrigatório"),
+  about: Yup.string()
+    .max(300, "Máximo de 300 caracteres")
+    .required("Este campo é obrigatório"),
+  latitude: Yup.number()
+    .nullable()
+    .required("Selecione o local no mapa"),
+  longitude: Yup.number()
+    .nullable()
+    .required("Selecione o local no mapa"),
+  instructions: Yup.string()
+    .required("Este campo é obrigatório"),
+  opening_hours: Yup.string()
+    .required("Este campo é obrigatório"),
+  open_on_weekends: Yup.boolean()
+    .required("Este campo é obrigatório"),
+  images: Yup.mixed()
+    .required('Mínimo de 1 imagem')
+});
+
 export function CreateOrphanage() {
-  const pageNavigate = useNavigate();
+  const pageNavigate = useNavigate();  
 
   const [position, setPosition] = useState<GeoLocation | null>(null);
+  const [open_on_weekends, setOpenOnWeekends] = useState(true);
 
-  const [name, setName] = useState('')
-  const [about, setAbout] = useState('')
-  const [instructions, setInstructions] = useState('')
-  const [opening_hours, setOpeningHours] = useState('')
-  const [open_on_weekends, setOpenOnWeekends] = useState(true)
-  const [images, setImages] = useState<File[]>([])
-  const [previewImages, setPreviewImages] = useState<string[]>([])
+  const [previewImages, setPreviewImages] = useState<string[]>([]);
+  const [images, setImages] = useState<File[]>([]);
 
+  const { values, errors, setErrors } = useForm<CreateOrphanageData>({
+    initialValues: {
+      latitude: position?.lat,
+      longitude: position?.lng,
+      name: '',
+      about: '',  
+      instructions: '',
+      opening_hours: '',
+      open_on_weekends,
+      images: null,
+    },
+  });
 
-  function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
-    if (!event.target.files) {
-      return
+  async function validation() {
+    try {
+      await validationYupSchema.validate(values, {
+        abortEarly: false
+      });
+
+      return values;
+    } catch(error: any) {
+      if(error instanceof Yup.ValidationError) {
+        const errors = getValidationErrors(error);
+
+        setErrors(errors);
+      }
     }
-    const selectedImages = Array.from(event.target.files)
-    setImages(selectedImages)
+  };
 
-    const selectedImagesPreview = selectedImages.map(image => {
-      return URL.createObjectURL(image)
-    })
+  async function handleSubmit() {
+    const data = await validation();
 
-    setPreviewImages(selectedImagesPreview)
+    try {
+      if(data) {
+        const formdata = new FormData();
+
+        formdata.append('name', data.name)
+        formdata.append('about', data.about)
+        formdata.append('latitude', String(data.latitude))
+        formdata.append('longitude', String(data.longitude))
+        formdata.append('instructions', data.instructions)
+        formdata.append('opening_hours', data.opening_hours)
+        formdata.append('open_on_weekends', String(data.open_on_weekends))
+        
+        if(data.images) {
+          const images_array = Array.from(data.images);
+
+          images_array?.forEach(image => {
+            formdata.append('images', image);
+          });
+        }
+
+        const response = await api.post('orphanages', formdata);
+        
+        pageNavigate(`/orphanages/${response.data.id}`);
+
+      }
+    } catch (error: any) {
+      console.log(error);
+    }
   }
 
-  async function handleSubmit(event: FormEvent) {
-    event.preventDefault()
-
-    const data = new FormData()
-    data.append('name', name)
-    data.append('about', about)
-    data.append('latitude', String(position?.lat))
-    data.append('longitude', String(position?.lng))
-    data.append('instructions', instructions)
-    data.append('opening_hours', opening_hours)
-    data.append('open_on_weekends', String(open_on_weekends))
-
-    images.forEach(image => {
-      data.append('images', image)
-    })
-
-    await api.post('orphanages', data)
-
-    pageNavigate('/app');
-
-  }
   return (
     <div id="page-create-orphanage">
       <Sidebar />
       <main>
-        <form onSubmit={handleSubmit} className="create-orphanage-form">
+        <Form
+          onSubmit={handleSubmit}
+          className="create-orphanage-form"
+        >
           <fieldset>
             <legend>Dados</legend>
 
             <LeafletOrphanagesMap
               style={{ width: '100%', height: 280 }}
             >
-              <MapMarker setPosition={setPosition} getCurrentLocation={false} />
+              <MapMarker setErrors={setErrors} setPosition={setPosition} getCurrentLocation={false} />
             </LeafletOrphanagesMap>
+            {errors?.latitude && errors?.longitude && (
+              <p className="input_error_text">{errors.latitude || errors.longitude}</p>
+            )}
 
-            <div className="input-block">
-              <label htmlFor="name">Nome</label>
-              <input id="name" 
-                value={name} 
-                onChange={event => setName(event.target.value)}
-              />
-            </div>
+            <Input
+              name='name'
+              labelText={'Nome'}
+            />
 
-            <div className="input-block">
-              <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
-              <textarea 
-                id="name" 
-                maxLength={300} 
-                value={about} 
-                onChange={event => setAbout(event.target.value)}/>
-            </div>
-
-            <div className="input-block">
-              <label htmlFor="images">Fotos</label>
-
+            <Textarea
+              name="about"
+              maxLength={300}
+              labelText={<>Sobre <span>Máximo de 300 caracteres</span></>}
+            />    
+            
+            <Input
+              type="file"
+              name="images"
+              labelText='Fotos'
+              multiple
+              files={{
+                itens: images,
+                setFiles: setImages,
+                setFilesPreview: setPreviewImages
+              }}
+            >
               <div className="images-container">
                 {previewImages.map(image => {
                   return (
-                    <img key={image} src={image} alt={name} />
+                    <img key={image} src={image} />
                   )
                 })}
-                <label htmlFor="image[]" className="new-image">
+                <label htmlFor="images" className="new-image">
                   <FiPlus size={24} color="#15b6d6" />
                 </label>
-                
               </div>
-              <input type="file" multiple onChange={handleSelectImages} id="image[]"/>
-            </div>
+            </Input>
           </fieldset>
 
           <fieldset>
             <legend>Visitação</legend>
 
-            <div className="input-block">
-              <label htmlFor="instructions">Instruções</label>
-              <textarea
-                id="instructions" 
-                value={instructions} 
-                onChange={event => setInstructions(event.target.value)}
-                />
-            </div>
+            <Textarea
+              name="instructions"
+              labelText={'Instruções'}
+            />
 
-            <div className="input-block">
-              <label htmlFor="opening_hours">Horário de funcionamento</label>
-              <input 
-                id="opening_hours" 
-                value={opening_hours} 
-                onChange={event => setOpeningHours(event.target.value)}/>
-            </div>
+            <Input
+              name='opening_hours'
+              labelText={'Horário de funcionamento'}
+            />
 
-            <div className="input-block">
-              <label htmlFor="open_on_weekends">Atende fim de semana</label>
-
+            <Input
+              name="open_on_weekends" 
+              labelText={'Funciona no fim de semana'}
+              hasField={false}
+            >
               <div className="button-select">
                 <button 
                   type="button" 
@@ -152,16 +214,14 @@ export function CreateOrphanage() {
                     Não
                 </button>
               </div>
-            </div>
+            </Input>
           </fieldset>
 
-          <button className="confirm-button" type="submit">
+          <button className="confirm-button" type="submit" >
             Confirmar
           </button>
-        </form>
+        </Form>
       </main>
     </div>
   );
 }
-
-// return `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;
