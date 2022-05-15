@@ -1,0 +1,27 @@
+.input-block textarea {
+  width: 100%;
+  background: #F5F8FA;
+  border: 1px solid #D3E2E5;
+  border-radius: 20px;
+  outline: 0;
+  color: #5C8599;
+
+  min-height: 120px;
+  max-height: 240px;
+  resize: vertical;
+  padding: 16px;
+  line-height: 28px;
+}
+
+.input-block.input_has_error label {
+  color: #e64545;
+}
+
+.input-block.input_has_error textarea {
+  border: 1px solid #e64545;
+}
+
+.input-block.input_has_error .input_error_text {
+  color: #e64545;
+  font-size: 14px;
+}
