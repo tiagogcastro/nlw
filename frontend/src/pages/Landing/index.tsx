@@ -14,10 +14,10 @@ export function Landing() {
 			<div className="content-wrapper">
 				<div className="happyAndLocation">
 					<img src={logoImg} alt="Happy" />
-					<div className="location">
+					{/* <div className="location">
 						<strong>Mangaratiba</strong>
 						<span>Rio de Janeiro</span>
-					</div>
+					</div> */}
 				</div>
 				<main>
 					<h1>Leve felicidade para o mundo</h1>

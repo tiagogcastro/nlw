@@ -37,8 +37,8 @@ export function OrphanagesMap() {
 				</header>
 
 				<footer>
-					<strong>Mangaratiba</strong>
-					<span>Rio de Janeiro</span>
+					{/* <strong>Mangaratiba</strong>
+					<span>Rio de Janeiro</span> */}
 					<Link to="/" className="toFirstPage">
 						<FiArrowLeft size={26} color="rgba(0,0, 0, 0.6)" className="arrow" />
 						Voltar
