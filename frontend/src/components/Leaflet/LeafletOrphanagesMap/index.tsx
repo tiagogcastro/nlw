@@ -18,23 +18,6 @@ export function LeafletOrphanagesMap({
   orphanages,
   ...rest
 }: LeafletOrphanagesMapProps) {
-  const [userCurrentLocation, setCurrentLocation] = useState<GeoLocation | null>(null);
-
-	function getCurrentLocation() {
-		navigator.geolocation.getCurrentPosition(position => {
-			if(position) {
-				return setCurrentLocation({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        });
-			}		
-		});
-	}
-
-  useEffect(() => {
-		getCurrentLocation();
-  }, []);
-
   return useMemo(() => {
 		return (
 			<>
@@ -48,14 +31,14 @@ export function LeafletOrphanagesMap({
         >
           {orphanages && <LeafletOrphanagesMarker orphanages={orphanages}/>}
           {rest.children}
-          <MapMarker 
+          <MapMarker
+            getCurrentLocation
             setCurrentMarkerOnClick={false} 
             popupText='Você está aqui'
-            setPosition={setCurrentLocation}
             icon={userHereIcon}
           />
         </LeafletMap>
 			</>
 		)
-	}, [userCurrentLocation, orphanages]);
+	}, [orphanages]);
 }
