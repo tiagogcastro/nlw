@@ -1,7 +1,7 @@
 import './styles.css';
 
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { FiClock, FiInfo } from "react-icons/fi";
 
@@ -17,7 +17,7 @@ interface Orphanage {
   name: string
   description: string
   instructions: string
-  open_hours: string
+  opening_hours: string
   open_on_weekends: string
   images: Array<{
     id: number
@@ -26,13 +26,19 @@ interface Orphanage {
 }
 
 export function Orphanage() {
+  const pageNavigate = useNavigate();
+
   const params = useParams<"id">();
   const [orphanage, setOrphanage] = useState<Orphanage | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
+
   useEffect(() => {
     api.get(`orphanages/${params.id}`).then(res => {
       setOrphanage(res.data)
+    })
+    .catch(error => {
+      pageNavigate('/orphanages');
     })
   }, [params.id]);
 
@@ -103,7 +109,7 @@ export function Orphanage() {
               <div className="hour">
                 <FiClock size={32} color="#15B6D6" />
                 Segunda à Sexta <br />
-                {orphanage.open_hours}
+                {orphanage.opening_hours}
               </div>
               {orphanage.open_on_weekends ? (
                 <div className="open-on-weekends">
