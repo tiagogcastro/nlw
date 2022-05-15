@@ -32,6 +32,7 @@
       <span>1 - </span>
       <a 
         href="https://github.com/Tiaguin061/nlw/tree/nlw1-ecoleta"
+        target="_blank"
       > Ecoleta </a> </br>
       Tecnologias usadas  - NodeJs | Sqlite | Javascript | Insominia | Html | Css | Nunjucks | Vscode
     </p>
@@ -44,6 +45,7 @@
       <span>2 - </span>
       <a 
         href="https://github.com/Tiaguin061/nlw/tree/nlw2-proffy"
+        target="_blank"
       > Proffy </a> </br>
       Tecnologias usadas  - NodeJs | Sqlite | Javascript | Insominia | Html | Css | Nunjucks | Vscode
     </p>
@@ -56,20 +58,24 @@
       <span>3 - </span>
       <a 
         href="https://github.com/Tiaguin061/nlw/tree/orphanage-nlw3"
+        target="_blank"
       > Orphanages </a> </br>
       Tecnologias usadas - </br>
       <a 
         href="https://github.com/Tiaguin061/nlw/tree/orphanage-nlw3/frontend"
+        target="_blank"
       >
       Frontend
       </a>: React, Typescript, Leaflet(para mapas) </br>
       <a 
         href="https://github.com/Tiaguin061/nlw/tree/orphanage-nlw3/backend"
+        target="_blank"
       >
       Backend
       </a>: NodeJs, Typescript, Express, Typeorm, Multer(para arquivos), Sqlite </br>
       <a 
         href="https://github.com/Tiaguin061/nlw/tree/orphanage-nlw3/mobile"
+        target="_blank"
       >
       Mobile
       </a>: React-Native, Typescript, Expo
