@@ -51,6 +51,36 @@
 </div>
 
 </br>
+
+<div align="left">
+  <h1 id="rodar-projeto">💻 Como rodar o projeto na sua máquina da forma que rodei na minha</h1>
+  <p>➡ Instalar o NodeJS na sua máquina. <p>
+
+  <p>➡ Vá no cmd dele(no Vscode o nome é "terminal") ou abra o cmd da sua máquina, digite e execute: </p>
+  <p> 
+
+    git clone 'url'
+  </p>
+  <p>➡ Entre no diretório desejado e siga as etapas especificas de cada um</p>
+  <p>
+      <a 
+        href="https://github.com/Tiaguin061/nlw/tree/orphanage-nlw3/frontend"
+      >
+      Frontend
+      </a></br>
+      <a 
+        href="https://github.com/Tiaguin061/nlw/tree/orphanage-nlw3/backend"
+      >
+      Backend
+      </a></br>
+      <a 
+        href="https://github.com/Tiaguin061/nlw/tree/orphanage-nlw3/mobile"
+      >
+      Mobile
+      </a>
+    </p>
+</div>
+
 </br>
 
 <div align="left">
