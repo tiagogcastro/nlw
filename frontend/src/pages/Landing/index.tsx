@@ -23,9 +23,6 @@ export function Landing() {
 					<h1>Leve felicidade para o mundo</h1>
 					<p>Visite orfanatos e mude o dia de muitas crianças.</p>
 				</main>
-				<Link to="login" className="restrictedAccess">
-					Acesso restrito
-				</Link>
 
 				<Link to="/orphanages" className="enter-app">
 					<FiArrowRight size={26} color="rgba(0,0, 0, 0.6)" />
